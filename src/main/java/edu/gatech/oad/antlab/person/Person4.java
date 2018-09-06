@@ -29,7 +29,7 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
-     public String calc(String input) {
+     private String calc(String input) {
         if (input.length() == 0){
             return null;
         }
