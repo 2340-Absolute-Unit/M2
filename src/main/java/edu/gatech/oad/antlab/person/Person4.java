@@ -16,7 +16,7 @@ public class Person4 {
      * name
      * @param pname the person's real name
      */
-  public Person4(String pname) {
+  private Person4(String pname) {
     name = pname;
   }
     /**
