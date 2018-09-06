@@ -29,9 +29,22 @@ public class Person4 {
      * @param input the string to be modified
      * @return the modified string
      */
-    private String calc(String input) {
-      //Person 4 put your implementation here
-      return null;
+     public String calc(String input) {
+        if (input.length() == 0){
+            return null;
+        }
+        char[] str = input.toCharArray();
+         for (int i = 0; i < str.length; i++) {
+             char c = str[i];
+             if (c == 126) {
+                 c = 32;
+             } else {
+                 c++;
+             }
+             str[i] = c;
+        }
+        String s = new String(str);
+        return s;
     }
     
     /**
