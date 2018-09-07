@@ -1,9 +1,10 @@
 package edu.gatech.oad.antlab.person;
+import java.util.ArrayList;
 
 /**
  *  A simple class for person 2
  *  returns their name and a
- *  modified string 
+ *  modified string
  *
  * @author Bob
  * @version 1.1
@@ -31,14 +32,23 @@ public class Person2 {
 	 */
 	private String calc(String input) {
 	  //Person 2 put your implementation here
-	  return null;
+	ArrayList<Character> listOfChars = new ArrayList<Character>();
+	for (char c : input.toCharArray()) {
+        listOfChars.add(c);
+	}
+	StringBuilder output = new StringBuilder(input.length());
+	while (listOfChars.size() != 0) {
+		int randomizeIt = (int) (Math.random() * listOfChars.size());
+		output.append(listOfChars.remove(randomizeIt));
+	}
+	  return output.toString();
 	}
 	/**
 	 * Return a string rep of this object
 	 * that varies with an input string
 	 *
 	 * @param input the varying string
-	 * @return the string representing the 
+	 * @return the string representing the
 	 *         object
 	 */
 	public String toString(String input) {
